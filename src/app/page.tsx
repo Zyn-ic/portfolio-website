@@ -155,8 +155,8 @@ export default function Home() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="sm">
-                      <a href={aboutData.linkedin} target="_blank" rel="noopener noreferrer">
-                        LinkedIn
+                      <a href={aboutData.discord} target="_blank" rel="noopener noreferrer">
+                        Discord
                       </a>
                     </Button>
                   </div>
