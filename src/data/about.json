@@ -1,0 +1,22 @@
+{
+  "name": "Your Name",
+  "title": "Full Stack Developer",
+  "bio": "Passionate developer with experience in modern web technologies. I love creating efficient, user-friendly applications that solve real-world problems.",
+  "location": "Your City, Country",
+  "email": "your.email@example.com",
+  "github": "https://github.com/yourusername",
+  "linkedin": "https://linkedin.com/in/yourusername",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "AWS",
+    "Docker"
+  ],
+  "experience": "2+ years",
+  "profileImage": "/images/profile.jpg"
+}

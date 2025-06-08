@@ -1,0 +1,72 @@
+[
+  {
+    "id": "project-1",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce platform with user authentication, product management, and payment processing.",
+    "longDescription": "Built a comprehensive e-commerce solution using React and Node.js. Features include user authentication, product catalog with search and filtering, shopping cart functionality, order management, and integrated Stripe payment processing. The admin panel allows for inventory management and sales analytics.",
+    "icon": "/images/projects/ecommerce-icon.png",
+    "images": [
+      "/images/projects/ecommerce-1.jpg",
+      "/images/projects/ecommerce-2.jpg",
+      "/images/projects/ecommerce-3.jpg"
+    ],
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "category": "Full Stack",
+    "githubUrl": "https://github.com/yourusername/ecommerce-platform",
+    "liveUrl": "https://your-ecommerce-demo.netlify.app",
+    "featured": true,
+    "keyFeatures": [
+      "User authentication and authorization",
+      "Product catalog with search and filters",
+      "Shopping cart and checkout process",
+      "Payment processing with Stripe",
+      "Admin dashboard for inventory management"
+    ]
+  },
+  {
+    "id": "project-2",
+    "title": "Weather Dashboard",
+    "description": "A responsive weather application that provides current conditions and forecasts for multiple cities.",
+    "longDescription": "Developed a modern weather dashboard using React and integrated with OpenWeatherMap API. Users can search for cities, view current weather conditions, 5-day forecasts, and save favorite locations. The app features a clean, responsive design with dynamic backgrounds based on weather conditions.",
+    "icon": "/images/projects/weather-icon.png",
+    "images": [
+      "/images/projects/weather-1.jpg",
+      "/images/projects/weather-2.jpg"
+    ],
+    "technologies": ["React", "TypeScript", "API Integration", "CSS Grid"],
+    "category": "Frontend",
+    "githubUrl": "https://github.com/yourusername/weather-dashboard",
+    "liveUrl": "https://your-weather-app.netlify.app",
+    "featured": false,
+    "keyFeatures": [
+      "Real-time weather data from OpenWeatherMap API",
+      "5-day weather forecast",
+      "City search and favorites",
+      "Responsive design with dynamic backgrounds",
+      "Local storage for user preferences"
+    ]
+  },
+  {
+    "id": "project-3",
+    "title": "Task Management API",
+    "description": "RESTful API for task management with user authentication and team collaboration features.",
+    "longDescription": "Built a robust REST API using Node.js and Express for task management. Features include user registration/login, task CRUD operations, team collaboration, file attachments, and real-time notifications. Implemented comprehensive testing and API documentation with Swagger.",
+    "icon": "/images/projects/api-icon.png",
+    "images": [
+      "/images/projects/api-1.jpg",
+      "/images/projects/api-2.jpg"
+    ],
+    "technologies": ["Node.js", "Express", "PostgreSQL", "JWT", "Swagger"],
+    "category": "Backend",
+    "githubUrl": "https://github.com/yourusername/task-management-api",
+    "liveUrl": "",
+    "featured": true,
+    "keyFeatures": [
+      "RESTful API design with full CRUD operations",
+      "JWT-based authentication and authorization",
+      "Team collaboration and permissions",
+      "File upload and attachment handling",
+      "Comprehensive API documentation with Swagger"
+    ]
+  }
+]
