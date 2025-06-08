@@ -20,7 +20,7 @@ interface AboutData {
   location: string;
   email: string;
   github: string;
-  linkedin: string;
+  discord: string;
   skills: string[];
   experience: string;
   profileImage: string;
