@@ -1,26 +1,31 @@
 [
   {
     "id": "project-1",
-    "title": "E-Commerce Platform",
-    "description": "A full-stack e-commerce platform with user authentication, product management, and payment processing.",
-    "longDescription": "Built a comprehensive e-commerce solution using React and Node.js. Features include user authentication, product catalog with search and filtering, shopping cart functionality, order management, and integrated Stripe payment processing. The admin panel allows for inventory management and sales analytics.",
-    "icon": "/images/projects/ecommerce-icon.png",
+    "title": "Stoway",
+    "description": "Advanced & customizable Roblox inventory/hotbar system with robust item instance tracking.",
+    "longDescription": "Stoway is a flexible and feature-rich inventory and hotbar system designed for Roblox experiences. It provides developers with a robust framework to manage player items, offering deep customization for various gameplay needs, from simple backpacks to complex, data-driven inventories",
+    "icon": "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Logo.png",
     "images": [
-      "/images/projects/ecommerce-1.jpg",
-      "/images/projects/ecommerce-2.jpg",
-      "/images/projects/ecommerce-3.jpg"
+      "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Settings1.png",
+      "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Settings2.png",
+      "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/HotbarExample1.png",
+      "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Background.png"
     ],
-    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "technologies": ["Fusion"],
     "category": "Full Stack",
-    "githubUrl": "https://github.com/yourusername/ecommerce-platform",
-    "liveUrl": "https://your-ecommerce-demo.netlify.app",
+    "githubUrl": "https://github.com/Zyn-ic/Stoway",
+    "liveUrl": "",
     "featured": true,
     "keyFeatures": [
-      "User authentication and authorization",
-      "Product catalog with search and filters",
-      "Shopping cart and checkout process",
-      "Payment processing with Stripe",
-      "Admin dashboard for inventory management"
+      "Drag & Drop UI",
+      "Swappable Slots",
+      "Stacking",
+      "Item Limit",
+      "Sorting",
+      "Static or Dynamic Display",
+      "Dual Mode Operation: Backpack/Inventory",
+      "Droppable Items",
+      "Rarity Check & Display"
     ]
   },
   {
