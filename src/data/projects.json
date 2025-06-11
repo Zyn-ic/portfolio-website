@@ -28,31 +28,84 @@
       "Rarity Check & Display"
     ]
   },
+
   {
     "id": "project-2",
-    "title": "Weather Dashboard",
-    "description": "A responsive weather application that provides current conditions and forecasts for multiple cities.",
-    "longDescription": "Developed a modern weather dashboard using React and integrated with OpenWeatherMap API. Users can search for cities, view current weather conditions, 5-day forecasts, and save favorite locations. The app features a clean, responsive design with dynamic backgrounds based on weather conditions.",
-    "icon": "/images/projects/weather-icon.png",
+    "title": "MannequinSytem",
+    "description": "This system supports custom mannequins — a great way to showcase different outfits in specific locations!",
+    "longDescription": "Using this system can you help with custom locations, custom themes, custom outfits, and a whole room to just explore, congiure and expand.",
+    "icon": "https://cdn-icons-png.flaticon.com/512/998/998774.png",
     "images": [
-      "/images/projects/weather-1.jpg",
-      "/images/projects/weather-2.jpg"
+      "https://private-user-images.githubusercontent.com/122565354/435534144-bc5c5d9e-975f-41e6-8297-fa8d52ea5a89.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk2MDEzNTYsIm5iZiI6MTc0OTYwMTA1NiwicGF0aCI6Ii8xMjI1NjUzNTQvNDM1NTM0MTQ0LWJjNWM1ZDllLTk3NWYtNDFlNi04Mjk3LWZhOGQ1MmVhNWE4OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYxMVQwMDE3MzZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lM2I4MTVkYmQ0N2ZiZmM1YTIwMGEzMTkwOTdiYmQzMTljZWE2MDNlZTc5Y2Q1NTg1ODU5M2U2Y2E3YmRiN2Q5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.5EFqIm5X62GjOJ1XY0v4jKmAeQzzxP7By3_ruhAD0yY"
     ],
-    "technologies": ["React", "TypeScript", "API Integration", "CSS Grid"],
-    "category": "Frontend",
-    "githubUrl": "https://github.com/yourusername/weather-dashboard",
-    "liveUrl": "https://your-weather-app.netlify.app",
+    "technologies": ["Janitor", "ZonePlus"],
+    "category": "Full Stack",
+    "githubUrl": "https://github.com/Zyn-ic/MannequinSytem",
+    "liveUrl": "https://vimeo.com/1077172684?share=copy",
     "featured": false,
     "keyFeatures": [
-      "Real-time weather data from OpenWeatherMap API",
-      "5-day weather forecast",
-      "City search and favorites",
-      "Responsive design with dynamic backgrounds",
-      "Local storage for user preferences"
+      "Shirts, Pants, Accessories",
+      "BodyColors ",
+      "WarmLoading",
+      "ColdLoading",
+      "Other Stuff"
     ]
   },
+
   {
     "id": "project-3",
+    "title": "MM2-AutoFarm",
+    "description": "Simple script that has both a hub and autofarm",
+    "longDescription": "I noticed my script has be forked and used in a lot of the newer mm2 autofarm scripts to find the closet coin and I'm kinda honored cause before I uploaded the free script back in summer 2024 autofarms were just collecting any random coin that spawned into the map and I did the same thing until I watched some youtube and found crushfire's video on Octree and from there the script was born. Sadly I had a lot to do in college so I couldn't update the script to be better but on my winter break in a mere two days I made an updated version which wouldn't have you go to coins outside the map or 'false positions' as I used to call it. Then in I think 4 or 5 days I created the Free Script which is a mm2 hub. I WILL NOT BE UPDATING the hub and will focus on better techniques/functions to collect coins;",
+    "icon": "https://cdn-icons-png.flaticon.com/512/347/347052.png",
+    "images": [
+      "https://private-user-images.githubusercontent.com/122565354/402792759-f71ac57d-37ff-4762-9ae3-f7cf4f88dc48.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk2MDE2NjMsIm5iZiI6MTc0OTYwMTM2MywicGF0aCI6Ii8xMjI1NjUzNTQvNDAyNzkyNzU5LWY3MWFjNTdkLTM3ZmYtNDc2Mi05YWUzLWY3Y2Y0Zjg4ZGM0OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYxMVQwMDIyNDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02Mzc3NTI4MGM2N2FkYzcyOTBiYzQ3ZGE3MmNlNTZjODgyZmQ2ZTljNGYyOWFjMjgwMWNmYjQ2Zjk2NTY3NzRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.R-2MdBnQ8c7PE4HAjp9GelasYfMCDTr4tmBtixhturg",
+      "https://private-user-images.githubusercontent.com/122565354/402800393-b4c145b6-38d0-4225-8120-4d6ead646e01.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDk2MDE2NjMsIm5iZiI6MTc0OTYwMTM2MywicGF0aCI6Ii8xMjI1NjUzNTQvNDAyODAwMzkzLWI0YzE0NWI2LTM4ZDAtNDIyNS04MTIwLTRkNmVhZDY0NmUwMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYxMVQwMDIyNDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iOTY5N2NjMjJmNjM4OTI1YjE1ZmM0ZDk5ZmJkOGQ0MDlhMTllYjRkZjcxNDhhN2I1NjU1YzQ4NDdmZjZjMDNkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.X9KkDOzGxTfd7CtJs8jp-jUyJrVj-I7DPwiOh50cFeA"
+    ],
+    "technologies": ["Octree", "XSX UI LIBRARY", "Iris UI LIBRARY"],
+    "category": "FrontEnd",
+    "githubUrl": "https://github.com/Zyn-ic/MM2-AutoFarm/",
+    "liveUrl": "https://youtu.be/2ds-9ShyP1c?si=_5kBU-7JTwVZ-zcW",
+    "featured": true,
+    "keyFeatures": [
+      "Increase/Decrease walkspeed",
+      "TP to player",
+      "Refresh Roles",
+      "Rejoin",
+      "Server Hop",
+      "Destroy gui",
+      "Autofarm",
+      "Murderer/Sheriff Info",
+      "Get Gun",
+      "Fling Murderer"
+    ]
+  },
+
+  {
+    "id": "project-4",
+    "title": "Database Project",
+    "description": "Full Stack Library System webapp for my database project.",
+    "longDescription": "This is a basic library system to demonstrate most if not all topics on Intro to Databases. Aslo features some topics from Web Dev, and GUI. To quick run the application makes line 280 and 281 readable by removing the '#' and adding one to line 279.",
+    "icon": "https://cdn-icons-png.flaticon.com/512/225/225993.png",
+    "images": [
+      "/images/projects/api-1.jpg",
+      "/images/projects/api-2.jpg"
+    ],
+    "technologies": ["Flask", "sqlite"],
+    "category": "Full Stack",
+    "githubUrl": "https://github.com/JustUsingaWebsite/Database-Project",
+    "liveUrl": "",
+    "featured": true,
+    "keyFeatures": [
+      "Loan Books",
+      "Return Books",
+      "Add/Edit Books, Loans, Patrons",
+      "Delete"
+    ]
+  },
+
+  {
+    "id": "project-5",
     "title": "Task Management API",
     "description": "RESTful API for task management with user authentication and team collaboration features.",
     "longDescription": "Built a robust REST API using Node.js and Express for task management. Features include user registration/login, task CRUD operations, team collaboration, file attachments, and real-time notifications. Implemented comprehensive testing and API documentation with Swagger.",
