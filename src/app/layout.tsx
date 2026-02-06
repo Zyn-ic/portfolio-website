@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
+import { BackgroundProvider } from "@/components/BackgroundProvider";
 
 const jbMono = JetBrains_Mono({
   variable: "--font-jb-mono",
@@ -20,17 +21,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${jbMono.variable}`}>
       <body suppressHydrationWarning className="antialiased font-mono bg-background">
-        <div className="fixed inset-0 -z-50 pointer-events-none bg-[#02060a]">
-          {/* GIF Layer - Slightly more visible but still blended */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.18] mix-blend-screen"
-            style={{ backgroundImage: 'url("https://i.imgur.com/QykhnKS.gif")' }}
-          />
-          {/* Gradient overlay for depth */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-80" />
-        </div>
-        <ClientBody>{children}</ClientBody>
+        <BackgroundProvider>
+          <ClientBody>{children}</ClientBody>
+        </BackgroundProvider>
       </body>
     </html>
   );
 }
+

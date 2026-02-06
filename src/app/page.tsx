@@ -25,6 +25,7 @@ import {
   Check,
 } from "lucide-react";
 import Link from "next/link";
+import { useBackground } from "@/components/BackgroundProvider";
 
 // Import data directly
 import aboutData from "@/data/about.json";
@@ -37,6 +38,7 @@ interface AboutData {
   title: string;
   bio: string;
   location: string;
+  timeZone: string;
   email: string;
   github: string;
   discord: string;
@@ -60,6 +62,40 @@ interface Project {
   keyFeatures: string[];
 }
 
+// Time Display Component
+function TimeDisplay({ timeZone }: { timeZone: string }) {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      try {
+        const now = new Date();
+        const timeString = new Intl.DateTimeFormat("en-US", {
+          timeZone,
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true,
+        }).format(now);
+        setTime(timeString);
+      } catch (e) {
+        setTime("");
+      }
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, [timeZone]);
+
+  if (!time) return null;
+
+  return (
+    <span className="text-muted-foreground ml-2">
+      • My current time: <span className="font-mono text-foreground font-medium">{time}</span>
+    </span>
+  );
+}
+
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
@@ -73,6 +109,13 @@ export default function Home() {
 
   // Project Modal state
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  
+  const { setPaused } = useBackground();
+
+  // Handle background pause when modal is open
+  useEffect(() => {
+    setPaused(!!selectedProject);
+  }, [selectedProject, setPaused]);
 
   // Initialize data
   useEffect(() => {
@@ -191,9 +234,12 @@ export default function Home() {
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
             {aboutData.title}
           </h2>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8">
-            <MapPin className="h-4 w-4" />
-            <span>{aboutData.location}</span>
+          <div className="flex items-center justify-center gap-2 text-muted-foreground mb-8 text-sm md:text-base flex-wrap">
+            <div className="flex items-center gap-2">
+              <MapPin className="h-4 w-4 shrink-0" />
+              <span>{aboutData.location}</span>
+            </div>
+            <TimeDisplay timeZone={aboutData.timeZone} />
           </div>
           <div className="flex justify-center gap-4">
             <Button asChild variant="default">
