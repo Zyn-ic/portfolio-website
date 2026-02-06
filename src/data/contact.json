@@ -1,0 +1,47 @@
+[
+  {
+    "id": "email",
+    "title": "Email",
+    "description": "Send me a message directly for inquiries.",
+    "icon": "Mail",
+    "actionType": "modal",
+    "actionValue": "Zynicc@proton.me",
+    "buttonText": "Send Email"
+  },
+  {
+    "id": "github",
+    "title": "GitHub",
+    "description": "Check out my code repositories and contributions.",
+    "icon": "Github",
+    "actionType": "link",
+    "actionValue": "https://github.com/Zyn-ic",
+    "buttonText": "View Profile"
+  },
+  {
+    "id": "discord",
+    "title": "Discord",
+    "description": "Connect with me on Discord.",
+    "icon": "Discord",
+    "actionType": "modal",
+    "actionValue": "@ykce",
+    "buttonText": "View User Tag"
+  },
+  {
+    "id": "twitter",
+    "title": "Twitter / X",
+    "description": "Follow me for updates and thoughts.",
+    "icon": "Twitter",
+    "actionType": "link",
+    "actionValue": "https://x.com/Cloud_Emmie",
+    "buttonText": "Follow Me"
+  },
+  {
+    "id": "roblox",
+    "title": "Roblox",
+    "description": "Find my games and profile on Roblox.",
+    "icon": "Roblox",
+    "actionType": "link",
+    "actionValue": "https://www.roblox.com/users/657817860/profile",
+    "buttonText": "View Profile"
+  }
+]
