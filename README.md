@@ -42,8 +42,8 @@ Detailed documentation is available in the **[Wiki](https://github.com/Zyn-ic/po
 
 - **[Getting Started](https://github.com/Zyn-ic/portfolio-website/wiki/Getting-Started)**: Setup and Installation.
 - **[Configuration](https://github.com/Zyn-ic/portfolio-website/wiki/Configuration-&-Content)**: How to edit `about.json`, `projects.json`, and set your Timezone.
-- **[Assets]([wiki-drafts/Assets-and-Media.md](https://github.com/Zyn-ic/portfolio-website/wiki/Assets-&-Media-Management))**: Managing images and the background video.
-- **[Deployment]([wiki-drafts/Deployment.md](https://github.com/Zyn-ic/portfolio-website/wiki/Deployment-Guide))**: Deploying to Netlify, GitHub Pages, or Vercel.
+- **[Assets](https://github.com/Zyn-ic/portfolio-website/wiki/Assets-&-Media-Management)**: Managing images and the background video.
+- **[Deployment](https://github.com/Zyn-ic/portfolio-website/wiki/Deployment-Guide)**: Deploying to Netlify, GitHub Pages, or Vercel.
 
 ## 🛠️ Built With
 
