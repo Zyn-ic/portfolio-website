@@ -15,7 +15,7 @@ export default function ContactSection({
   onContactAction,
 }: ContactSectionProps) {
   return (
-    <section id="contact" className="py-16 px-4">
+    <section id="contact" className="py-12 md:py-16 px-4 scroll-mt-[3.25rem]">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
         <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">

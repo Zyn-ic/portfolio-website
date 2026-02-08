@@ -15,7 +15,7 @@ export default function AboutSection({ about }: AboutSectionProps) {
   const [aboutExpanded, setAboutExpanded] = useState(false);
 
   return (
-    <section id="about" className="py-16 px-4">
+    <section id="about" className="py-12 md:py-16 px-4 scroll-mt-[3.25rem]">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
         <Card className="mb-8">

@@ -34,7 +34,9 @@ export default function ProjectCard({
             />
           </div>
           <div>
-            <CardTitle className="text-lg">{project.title}</CardTitle>
+            <CardTitle className="text-lg line-clamp-2">
+              {project.title}
+            </CardTitle>
             <Badge variant="secondary" className="text-xs">
               {project.category}
             </Badge>

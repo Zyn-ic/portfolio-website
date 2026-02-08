@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ about }: HeroSectionProps) {
   return (
-    <section className="pt-24 pb-16 px-4">
+    <section className="pt-24 pb-12 md:pb-16 px-4">
       <div className="container mx-auto text-center animate-fade-in-up">
         <div className="w-32 h-32 rounded-full bg-muted mx-auto mb-6 overflow-hidden">
           <img
@@ -35,11 +35,11 @@ export default function HeroSection({ about }: HeroSectionProps) {
           </div>
           <TimeDisplay timeZone={about.timeZone} />
         </div>
-        <div className="flex justify-center gap-4">
-          <Button asChild variant="default">
+        <div className="flex justify-center gap-4 flex-wrap">
+          <Button asChild variant="default" className="min-w-[10rem]">
             <a href="#projects">View My Work</a>
           </Button>
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="min-w-[10rem]">
             <a href="#contact">
               <Mail className="h-4 w-4 mr-2" />
               Get In Touch

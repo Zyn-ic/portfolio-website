@@ -17,13 +17,13 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       <div className="w-full max-w-5xl max-h-[90vh] bg-card border border-border rounded-xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-300">
         <div className="p-6 border-b border-border flex justify-between items-center bg-card z-20">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center overflow-hidden shrink-0">
-              <img
-                src={project.icon}
-                alt={`${project.title} icon`}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src =
+                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center overflow-hidden shrink-0">
+                  <img
+                    src={project.icon}
+                    alt={`${project.title} icon`}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src =
                     "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjNDQ0Ii8+CjxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K";
                 }}
               />

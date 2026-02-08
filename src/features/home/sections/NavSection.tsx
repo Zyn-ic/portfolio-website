@@ -12,7 +12,7 @@ export default function NavSection({ name }: NavSectionProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-card/70 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 className="text-xl font-bold">{name}</h1>
         <div className="hidden sm:flex gap-6">
@@ -41,7 +41,7 @@ export default function NavSection({ name }: NavSectionProps) {
       {isOpen && (
         <div
           id="mobile-nav"
-          className="sm:hidden border-t border-border bg-background/90 backdrop-blur-md"
+          className="sm:hidden border-t border-border bg-card/80 backdrop-blur-md animate-in fade-in slide-in-from-top-2"
         >
           <div className="container mx-auto px-4 py-3 flex flex-col gap-3">
             <a

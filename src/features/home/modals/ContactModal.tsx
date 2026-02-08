@@ -36,6 +36,9 @@ export default function ContactModal({
         </div>
         <div className="flex items-center gap-2 p-3 bg-muted rounded-md mb-6">
           <code className="flex-1 font-mono text-sm break-all">{content}</code>
+          <span className="sr-only" aria-live="polite">
+            {isCopied ? "Copied to clipboard" : ""}
+          </span>
           <Button
             variant="ghost"
             size="sm"
