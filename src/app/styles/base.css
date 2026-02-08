@@ -1,0 +1,37 @@
+:root {
+  --background: 210 40% 2%;
+  --foreground: 230 15% 85%;
+  --card: 210 40% 3%;
+  --card-foreground: 230 15% 85%;
+  --popover: 210 40% 3%;
+  --popover-foreground: 230 15% 85%;
+  --primary: 230 18% 82%;
+  --primary-foreground: 230 25% 12%;
+  --secondary: 210 40% 7%;
+  --secondary-foreground: 230 15% 85%;
+  --muted: 210 40% 7%;
+  --muted-foreground: 230 10% 65%;
+  --accent: 210 40% 7%;
+  --accent-foreground: 230 15% 85%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 210 40% 12%;
+  --input: 210 40% 12%;
+  --ring: 210 40% 90%;
+  --radius: 0.5rem;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply text-foreground;
+  font-family: var(--font-jb-mono), monospace;
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

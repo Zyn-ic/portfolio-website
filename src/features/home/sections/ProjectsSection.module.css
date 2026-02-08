@@ -1,0 +1,9 @@
+/* Project card hover effects */
+.projectCard {
+  transition: all 0.3s ease;
+  @apply hover:scale-105 hover:shadow-2xl;
+}
+
+.projectCard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
