@@ -102,7 +102,11 @@
     "description": "A roblox movement system with FSM strict transitions to keep track of character states.",
     "longDescription": "A more controlled and memory first approach to tracking and keeping up with a players character states during movement. FSM helps me achieve a riggied approach to movement so that there are expected outcomes for each state.",
     "icon": "https://i.imgur.com/eX02Cb8.png",
-    "images": ["https://i.imgur.com/tGVS4kI.gif","https://i.imgur.com/Y6CMgce.gif"],
+    "images": [
+      "https://i.imgur.com/tGVS4kI.gif",
+      "https://i.imgur.com/Y6CMgce.gif",
+      "https://i.imgur.com/kY1SWr3.gif"
+    ],
     "technologies": ["IllusionIAS", "RunSerivce", "State Machine"],
     "category": "Full Stack",
     "githubUrl": "",
