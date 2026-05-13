@@ -4,7 +4,6 @@
     "title": "Stoway",
     "description": "Advanced & customizable Roblox inventory/hotbar system with robust item instance tracking.",
     "longDescription": "Stoway is a flexible and feature-rich inventory and hotbar system designed for Roblox experiences. It provides developers with a robust framework to manage player items, offering deep customization for various gameplay needs, from simple backpacks to complex, data-driven inventories",
-    "icon": "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Logo.png",
     "images": [
       "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Settings1.png",
       "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Settings2.png",
@@ -34,7 +33,6 @@
     "title": "MannequinSytem",
     "description": "This system supports custom mannequins — a great way to showcase different outfits in specific locations!",
     "longDescription": "Using this system can you help with custom locations, custom themes, custom outfits, and a whole room to just explore, congiure and expand.",
-    "icon": "https://cdn.pixabay.com/photo/2017/06/09/15/16/fashion-2387098_1280.png",
     "images": [],
     "technologies": ["Janitor", "ZonePlus"],
     "category": "Full Stack",
@@ -55,7 +53,6 @@
     "title": "MM2-AutoFarm",
     "description": "Simple script that has both a hub and autofarm",
     "longDescription": "I noticed my script has be forked and used in a lot of the newer mm2 autofarm scripts to find the closet coin and I'm kinda honored cause before I uploaded the free script back in summer 2024 autofarms were just collecting any random coin that spawned into the map and I did the same thing until I watched some youtube and found crushfire's video on Octree and from there the script was born. Sadly I had a lot to do in college so I couldn't update the script to be better but on my winter break in a mere two days I made an updated version which wouldn't have you go to coins outside the map or 'false positions' as I used to call it. Then in I think 4 or 5 days I created the Free Script which is a mm2 hub. I WILL NOT BE UPDATING the hub and will focus on better techniques/functions to collect coins;",
-    "icon": "https://cdn-icons-png.flaticon.com/512/347/347052.png",
     "images": [],
     "technologies": ["Octree", "XSX UI LIBRARY", "Iris UI LIBRARY"],
     "category": "FrontEnd",
@@ -81,13 +78,12 @@
     "title": "Database Project",
     "description": "Full Stack Library System webapp for my database project.",
     "longDescription": "This is a basic library system to demonstrate most if not all topics on Intro to Databases. Aslo features some topics from Web Dev, and GUI. To quick run the application makes line 280 and 281 readable by removing the '#' and adding one to line 279.",
-    "icon": "https://img.freepik.com/premium-vector/database-clip-art-icon-technology-data-management_579306-59258.jpg?semt=ais_hybrid&w=740&q=80",
     "images": [],
     "technologies": ["Flask", "sqlite"],
     "category": "Full Stack",
     "githubUrl": "https://github.com/JustUsingaWebsite/Database-Project",
     "liveUrl": "",
-    "featured": true,
+    "featured": false,
     "keyFeatures": [
       "Loan Books",
       "Return Books",
@@ -101,7 +97,6 @@
     "title": "Roblox MovementSystem",
     "description": "A roblox movement system with FSM strict transitions to keep track of character states.",
     "longDescription": "A more controlled and memory first approach to tracking and keeping up with a players character states during movement. FSM helps me achieve a riggied approach to movement so that there are expected outcomes for each state.",
-    "icon": "https://i.imgur.com/eX02Cb8.png",
     "images": [
       "https://i.imgur.com/tGVS4kI.gif",
       "https://i.imgur.com/Y6CMgce.gif",
@@ -116,6 +111,59 @@
       "Easy to keep track of memory",
       "Strick defined states and implementations",
       "Easy console and mobile integrations"
+    ]
+  },
+
+  {
+    "id": "project-6",
+    "title": "Asymmetrical Systems",
+    "description": "Features round system, character kit system, single combat system, abilities, perks and status effects.",
+    "longDescription": "Using signalplus to communicate between scripts with API endpoints for admin cmds and debugging/logging there is a lot here and it is all mostly event based and not a constant observer checker or loop of any kind.",
+    "images": [
+      "https://i.imgur.com/PGSrnh8.gif",
+      "https://i.imgur.com/NlUtqrE.gif"
+    ],
+    "technologies": [
+      "IllusionIAS",
+      "State Machine",
+      "QuickZone",
+      "Custom systems"
+    ],
+    "category": "Full Stack",
+    "githubUrl": "",
+    "liveUrl": "https://i.imgur.com/NlUtqrE.gif",
+    "featured": true,
+    "keyFeatures": [
+      "Easy to bind to state changes",
+      "Keep track of how many rounds",
+      "Add and Customize game state/constants",
+      "Scalable structure so there isn't character rig spam in replicatedstorage"
+    ]
+  },
+
+  {
+    "id": "project-7",
+    "title": "Weapon Framework",
+    "description": "Using state machines and batched networking & raycasts I create the milkchoco framework",
+    "longDescription": "taking both opensourced and self created optimizations I take the usualy loadout store -> input -> network -> validation to a more structured appeal.",
+    "images": ["https://i.imgur.com/2GexYWV.gif"],
+    "technologies": [
+      "ProjectilePlus",
+      "RunSerivce",
+      "State Machine",
+      "Custom AnimationService",
+      "NetRay [networking library]",
+      "SwiftCast"
+    ],
+    "category": "Full Stack",
+    "githubUrl": "",
+    "liveUrl": "https://i.imgur.com/2GexYWV.gif",
+    "featured": false,
+    "keyFeatures": [
+      "Really Optimized network packets",
+      "Proper Replication visuals",
+      "Optimized per-frame raycast batching based on fire-rate",
+      "Server validates per packet fire-rate checks"
     ]
   }
 ]
