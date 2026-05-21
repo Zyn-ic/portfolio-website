@@ -121,17 +121,18 @@
     "longDescription": "Using signalplus to communicate between scripts with API endpoints for admin cmds and debugging/logging there is a lot here and it is all mostly event based and not a constant observer checker or loop of any kind.",
     "images": [
       "https://i.imgur.com/PGSrnh8.gif",
-      "https://i.imgur.com/NlUtqrE.gif"
+      "https://i.imgur.com/i81issw.gif",
+      "https://i.imgur.com/1opYJqC.gif"
     ],
     "technologies": [
       "IllusionIAS",
       "State Machine",
-      "QuickZone",
+      "PromiseModule",
       "Custom systems"
     ],
     "category": "Full Stack",
     "githubUrl": "",
-    "liveUrl": "https://i.imgur.com/NlUtqrE.gif",
+    "liveUrl": "https://i.imgur.com/i81issw.gif",
     "featured": true,
     "keyFeatures": [
       "Easy to bind to state changes",
@@ -146,7 +147,11 @@
     "title": "Weapon Framework",
     "description": "Using state machines and batched networking & raycasts I create the milkchoco framework",
     "longDescription": "taking both opensourced and self created optimizations I take the usualy loadout store -> input -> network -> validation to a more structured appeal.",
-    "images": ["https://i.imgur.com/2GexYWV.gif"],
+    "images": [
+      "https://i.imgur.com/WvlzLtv.gif",
+      "https://i.imgur.com/bnixQYM.gif",
+      "https://i.imgur.com/PCbk2Ga.gif"
+    ],
     "technologies": [
       "ProjectilePlus",
       "RunSerivce",

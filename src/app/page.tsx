@@ -211,6 +211,8 @@ function CopyButton({ text }: { text: string }) {
    ═══════════════════════════════════════════════════ */
 
 function ProjectCard({ project, index }: { project: typeof projectsData[0]; index: number }) {
+  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
+
   return (
     <div className="pc-project-card">
       <div className="pc-project-card-header">
@@ -247,9 +249,42 @@ function ProjectCard({ project, index }: { project: typeof projectsData[0]; inde
               <h4>Gallery</h4>
               <div className="pc-project-detail-media-grid">
                 {project.images.map((img, i) => (
-                  <a key={i} href={img} target="_blank" rel="noopener noreferrer" className="pc-project-media-item">
-                    <img src={img} alt={`${project.title} ${i + 1}`} loading="lazy" />
-                  </a>
+                  <div key={i} className="pc-project-media-item">
+                    <img
+                      src={img}
+                      alt={`${project.title} ${i + 1}`}
+                      loading="lazy"
+                      onClick={() => setLightboxImg(img)}
+                      style={{ cursor: "pointer" }}
+                    />
+                    <div className="pc-project-media-buttons">
+                      <button
+                        className="pc-project-media-btn pc-project-media-btn--expand"
+                        onClick={() => setLightboxImg(img)}
+                        title="Expand"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="15 3 21 3 21 9" />
+                          <polyline points="9 21 3 21 3 15" />
+                          <line x1="21" y1="3" x2="14" y2="10" />
+                          <line x1="3" y1="21" x2="10" y2="14" />
+                        </svg>
+                      </button>
+                      <a
+                        href={img}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pc-project-media-btn pc-project-media-btn--link"
+                        title="Open in new tab"
+                      >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -269,6 +304,23 @@ function ProjectCard({ project, index }: { project: typeof projectsData[0]; inde
           </div>
         </div>
       </div>
+
+      {lightboxImg && (
+        <div className="pc-lightbox" onClick={() => setLightboxImg(null)}>
+          <button className="pc-lightbox-close" onClick={() => setLightboxImg(null)} aria-label="Close">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <img
+            className="pc-lightbox-content"
+            src={lightboxImg}
+            alt="Expanded view"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -661,7 +713,7 @@ export default function PaperCraftPortfolio() {
         .pc-icon-pin { animation: pcPinBounce 2s ease-in-out infinite; transform-origin: center bottom; }
         @keyframes pcPinBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
         .pc-icon-mail-flap { animation: pcMailFlap 3s ease-in-out infinite; transform-origin: 16px 9px; }
-        @keyframes pcMailFlap { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.85); } }
+        @keyframes pcMailFlap { 0%, 90%, 100% { transform: scaleY(1); } 35%, 65% { transform: scaleY(0.05); } }
         .pc-icon--small { width: 18px; height: 18px; margin-right: 0.35rem; top: -1px; }
         .pc-icon--tiny { width: 14px; height: 14px; display: inline-block; vertical-align: middle; position: relative; top: -1px; }
 
@@ -917,27 +969,112 @@ export default function PaperCraftPortfolio() {
           grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
           gap: 0.6rem;
         }
-        .pc-project-media-item {
+.pc-project-media-item {
           display: block; overflow: hidden;
           border: 1px solid var(--pc-border);
           background: var(--pc-bg);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
         }
         .pc-project-media-item:hover {
           transform: rotate(-1deg) scale(1.02);
           box-shadow: 3px 3px 0 var(--pc-shadow);
         }
         .pc-project-media-item img { width: 100%; height: 100px; object-fit: cover; display: block; }
-        .pc-project-detail-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .pc-project-media-buttons {
+          position: absolute;
+          top: 0.35rem;
+          right: 0.35rem;
+          display: flex;
+          gap: 0.3rem;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+        .pc-project-media-item:hover .pc-project-media-buttons {
+          opacity: 1;
+        }
+        .pc-project-media-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 26px;
+          height: 26px;
+          border-radius: 3px;
+          border: 1px solid var(--pc-border-strong);
+          background: var(--pc-bg-card);
+          color: var(--pc-text-muted);
+          cursor: pointer;
+          transition: all 0.2s ease;
+          text-decoration: none;
+        }
+        .pc-project-media-btn:hover {
+          color: var(--pc-accent);
+          border-color: var(--pc-accent);
+          background: var(--pc-accent-bg);
+        }
+        .pc-project-media-btn--link:hover {
+          color: var(--pc-blue);
+          border-color: var(--pc-blue);
+          background: rgba(125,160,209,0.1);
+        }
+
+        .pc-project-detail-links {
+          display: flex; gap: 0.75rem; flex-wrap: wrap;
+        }
         .pc-project-link {
           font-size: 0.8rem; font-weight: 700;
           color: var(--pc-blue); text-decoration: none;
           border: 1px dashed var(--pc-blue);
           padding: 0.3rem 0.75rem; transition: all 0.3s ease;
         }
-        .pc-project-link:hover { background: var(--pc-blue); color: var(--pc-bg-card); border-style: solid; }
+        .pc-project-link:hover {
+          background: var(--pc-blue); color: var(--pc-bg-card); border-style: solid;
+        }
         .pc-project-link--alt { color: var(--pc-accent); border-color: var(--pc-accent); }
         .pc-project-link--alt:hover { background: var(--pc-accent); color: var(--pc-bg-card); }
+
+        /* ═══════════ LIGHTBOX ═══════════ */
+        .pc-lightbox {
+          position: fixed;
+          inset: 0;
+          z-index: 1000;
+          background: rgba(0,0,0,0.85);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          animation: pcLightboxFade 0.2s ease;
+        }
+        @keyframes pcLightboxFade {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        .pc-lightbox-content {
+          max-width: 90vw;
+          max-height: 90vh;
+          object-fit: contain;
+          border-radius: 4px;
+          box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+          animation: pcLightboxScale 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @keyframes pcLightboxScale {
+          from { transform: scale(0.85); opacity: 0; }
+          to { transform: scale(1); opacity: 1; }
+        }
+        .pc-lightbox-close {
+          position: fixed;
+          top: 1rem;
+          right: 1rem;
+          background: none;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          padding: 0.5rem;
+          opacity: 0.7;
+          transition: opacity 0.2s;
+          z-index: 1001;
+        }
+        .pc-lightbox-close:hover { opacity: 1; }
 
         /* ═══════════ CONTACT ═══════════ */
         .paper-contact-grid {
