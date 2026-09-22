@@ -143,6 +143,50 @@ function CopyButton({ text }: { text: string }) {
   );
 }
 
+/* ═══════════ OG ROBLOX HERO DECORATIONS ═══════════ */
+// Classic noob: yellow head/arms, blue torso, green legs.
+function ClassicNoob() {
+  return (
+    <svg viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classic Roblox noob">
+      <rect x="22" y="52" width="9" height="24" rx="2" fill="#4B974B" />
+      <rect x="33" y="52" width="9" height="24" rx="2" fill="#4B974B" />
+      <rect x="8" y="28" width="8" height="22" rx="2" fill="#F5CD30" />
+      <rect x="48" y="28" width="8" height="22" rx="2" fill="#F5CD30" />
+      <rect x="18" y="26" width="28" height="26" rx="3" fill="#0D69AC" />
+      <rect x="20" y="4" width="24" height="20" rx="6" fill="#F5CD30" />
+      <circle cx="27" cy="12" r="1.8" fill="#1a1a1a" />
+      <circle cx="37" cy="12" r="1.8" fill="#1a1a1a" />
+      <path d="M25 17q7 5 14 0" stroke="#1a1a1a" strokeWidth="1.8" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// The iconic smile face.
+function ClassicSmile() {
+  return (
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Classic Roblox smile">
+      <circle cx="32" cy="32" r="28" fill="#F5CD30" />
+      <ellipse cx="22" cy="25" rx="3.2" ry="4.5" fill="#1a1a1a" />
+      <ellipse cx="42" cy="25" rx="3.2" ry="4.5" fill="#1a1a1a" />
+      <path d="M18 40q14 12 28 0" stroke="#1a1a1a" strokeWidth="3" fill="none" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+// Builders Club ticket — peak 2016 nostalgia.
+function TixTicket() {
+  return (
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roblox tix ticket">
+      <g transform="rotate(-8 32 32)">
+        <rect x="6" y="20" width="52" height="24" rx="4" fill="#F8E08E" stroke="#C9A227" strokeWidth="2" />
+        <line x1="20" y1="22" x2="20" y2="42" stroke="#C9A227" strokeWidth="1.5" strokeDasharray="3 2" />
+        <circle cx="13" cy="32" r="3" fill="none" stroke="#C9A227" strokeWidth="1.5" />
+        <text x="39" y="37" textAnchor="middle" fontSize="11" fontWeight="800" fill="#8a6d1a" fontFamily="inherit">TIX</text>
+      </g>
+    </svg>
+  );
+}
+
 export {
   PencilIcon,
   CoffeeIcon,
@@ -155,4 +199,7 @@ export {
   CheckIcon,
   HeroMailCard,
   CopyButton,
+  ClassicNoob,
+  ClassicSmile,
+  TixTicket,
 };

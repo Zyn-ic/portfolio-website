@@ -12,6 +12,9 @@ import {
   ClockIcon,
   MapPinIcon,
   HeroMailCard,
+  ClassicNoob,
+  ClassicSmile,
+  TixTicket,
 } from "@/components/icons";
 import { CopyButton } from "@/components/icons";
 import HorizontalProjects from "@/components/HorizontalProjects";
@@ -156,9 +159,9 @@ export default function PaperCraftPortfolio() {
         </nav>
 
         <section className="paper-hero">
-          <div className="paper-hero-doodle" style={{ top: "15%", left: "8%" }}>⚡</div>
-          <div className="paper-hero-doodle" style={{ top: "25%", right: "10%" }}>◆</div>
-          <div className="paper-hero-doodle" style={{ bottom: "20%", left: "15%" }}>⬡</div>
+          <div className="paper-hero-doodle paper-hero-doodle--noob" style={{ top: "12%", left: "7%" }}><ClassicNoob /></div>
+          <div className="paper-hero-doodle paper-hero-doodle--smile" style={{ top: "22%", right: "9%" }}><ClassicSmile /></div>
+          <div className="paper-hero-doodle paper-hero-doodle--tix" style={{ bottom: "18%", left: "13%" }}><TixTicket /></div>
           <Reveal>
             <h1>Hello, I&apos;m {aboutData.name}</h1>
           </Reveal>

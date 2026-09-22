@@ -20,6 +20,10 @@
   --pc-shadow: rgba(0,0,0,0.35);
   --pc-shadow-deep: rgba(0,0,0,0.45);
   --pc-nav-bg: rgba(0,162,255,0.96);
+  --pc-stud: rgba(255,255,255,0.06);
+  --pc-base: #333638;
+  --pc-base-stud: rgba(255,255,255,0.09);
+  --pc-base-text: #d7d9da;
 }
 
 .paper.pc-light-mode {
@@ -42,6 +46,10 @@
   --pc-shadow: rgba(0,0,0,0.16);
   --pc-shadow-deep: rgba(0,0,0,0.10);
   --pc-nav-bg: rgba(0,162,255,0.97);
+  --pc-stud: rgba(0,0,0,0.055);
+  --pc-base: #a3a2a5;
+  --pc-base-stud: rgba(0,0,0,0.16);
+  --pc-base-text: #3c3e40;
 }
 
 /* ═══════════ BASE ═══════════ */
@@ -51,7 +59,9 @@ html { overflow-x: hidden; }
 .paper button { font-family: inherit; }
 .paper ::selection { background: var(--pc-accent); color: #fff; }
 .paper {
-  background: var(--pc-bg);
+  background-color: var(--pc-bg);
+  background-image: radial-gradient(circle, var(--pc-stud) 2.2px, transparent 2.8px);
+  background-size: 24px 24px;
   color: var(--pc-text);
   font-family: var(--font-rbx), 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -135,7 +145,11 @@ html { overflow-x: hidden; }
   padding: 0.85rem 2rem;
   display: flex; justify-content: space-between; align-items: center;
   transition: all 0.4s ease;
-  background: #00a2ff;
+  background-color: #00a2ff;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.13) 1.6px, transparent 2.2px),
+    linear-gradient(#00a2ff, #00a2ff);
+  background-size: 16px 16px, cover;
   border-bottom: 1px solid #0078c2;
   box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
@@ -187,6 +201,8 @@ html { overflow-x: hidden; }
   align-items: center; justify-content: flex-start;
   text-align: center; padding: 6rem 2rem 5rem;
   position: relative; z-index: 1;
+  background-image: radial-gradient(circle, var(--pc-stud) 2.6px, transparent 3.2px);
+  background-size: 32px 32px;
 }
 .paper-hero h1 {
   font-size: clamp(2.5rem, 8vw, 5rem);
@@ -232,8 +248,20 @@ button.paper-hero-info-card { cursor: pointer; }
   border-style: solid; background: var(--pc-green-bg); color: var(--pc-green) !important; border-color: var(--pc-green) !important;
 }
 .paper-hero-doodle {
-  position: absolute; font-size: 4rem; opacity: 0.05;
-  user-select: none; color: var(--pc-text);
+  position: absolute;
+  width: 72px;
+  user-select: none;
+  z-index: 0;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.3));
+  animation: rbxFloat 6s ease-in-out infinite;
+}
+.paper-hero-doodle--noob { width: 76px; }
+.paper-hero-doodle--smile { width: 58px; animation-delay: -2s; }
+.paper-hero-doodle--tix { width: 84px; animation-delay: -4s; }
+.paper-hero-doodle svg { width: 100%; height: auto; display: block; }
+@keyframes rbxFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
 }
 
 /* ═══════════ SECTIONS ═══════════ */
@@ -503,21 +531,23 @@ button.paper-hero-info-card { cursor: pointer; }
 }
 .pc-project-link {
   font-size: 0.8rem; font-weight: 600;
-  color: #fff; background: var(--pc-accent);
+  color: #fff; background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.20) 1.5px, transparent 2.1px);
+  background-size: 12px 12px;
   text-decoration: none;
   border: 1px solid var(--pc-accent-deep);
   border-radius: 4px;
   padding: 0.4rem 0.95rem; transition: all 0.15s ease;
 }
 .pc-project-link:hover {
-  background: var(--pc-accent); color: #fff;
+  background-color: var(--pc-accent); color: #fff;
   filter: brightness(1.07);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 /* Live Demo gets the classic flat green Play button */
-.pc-project-link--alt { background: var(--pc-play); border-color: var(--pc-play-deep); }
-.pc-project-link--alt:hover { background: var(--pc-play); color: #fff; }
+.pc-project-link--alt { background-color: var(--pc-play); border-color: var(--pc-play-deep); }
+.pc-project-link--alt:hover { background-color: var(--pc-play); color: #fff; }
 
 /* ═══════════ LIGHTBOX ═══════════ */
 .pc-lightbox {
@@ -603,11 +633,14 @@ button.paper-hero-info-card { cursor: pointer; }
 .pc-copy-button--copied { background: var(--pc-green-bg); color: var(--pc-green); border-color: var(--pc-green); }
 .pc-copy-text { font-family: inherit; }
 
-/* ═══════════ FOOTER ═══════════ */
+/* ═══════════ FOOTER — classic baseplate ═══════════ */
 .paper-footer {
   position: relative; z-index: 1;
-  text-align: center; padding: 1rem 2rem;
-  font-size: 0.8rem; color: var(--pc-text-meta);
+  text-align: center; padding: 1.25rem 2rem 1.5rem;
+  font-size: 0.8rem; font-weight: 600; color: var(--pc-base-text);
+  background-color: var(--pc-base);
+  background-image: radial-gradient(circle, var(--pc-base-stud) 2.4px, transparent 3px);
+  background-size: 22px 22px;
   border-top: 1px solid var(--pc-border-strong);
 }
 
@@ -619,6 +652,7 @@ button.paper-hero-info-card { cursor: pointer; }
 @media (max-width: 768px) {
   .paper-nav { padding: 0.75rem 1rem; }
   .paper-mobile-toggle { display: block; }
+  .paper-hero-doodle { display: none; }
   .paper-nav-links {
     display: flex; flex-direction: column; gap: 1rem;
     position: absolute; top: 100%; left: 0; right: 0;
