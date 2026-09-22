@@ -138,13 +138,12 @@ function HorizontalProjects() {
             willChange: "transform",
           }}
         >
-          {projectsData.map((p, i) => (
+          {projectsData.map((p) => (
             <div
               key={p.id}
               style={{
                 flex: `0 0 ${cardWidth}px`,
                 width: `${cardWidth}px`,
-                transform: `rotate(${i % 2 === 0 ? -0.5 : 0.3}deg)`,
               }}
             >
               <ProjectCard project={p} />

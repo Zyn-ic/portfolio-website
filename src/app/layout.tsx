@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const jbMono = JetBrains_Mono({
-  variable: "--font-jb-mono",
+// Montserrat: closest free stand-in for Gotham, the Roblox (2016-18) typeface.
+const rbxFont = Montserrat({
+  variable: "--font-rbx",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -21,10 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jbMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${rbxFont.variable}`} suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className="antialiased font-mono"
+        className="antialiased"
       >
         {children}
       </body>

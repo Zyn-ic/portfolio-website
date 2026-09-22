@@ -206,13 +206,13 @@ export default function PaperCraftPortfolio() {
         </section>
 
         <div className="paper-tape-divider">
-          <div className="paper-tape" style={{ transform: "rotate(2deg)", background: "var(--pc-accent-bg)" }} />
+          <div className="paper-tape" />
         </div>
 
         <HorizontalProjects />
 
         <div className="paper-tape-divider">
-          <div className="paper-tape" style={{ transform: "rotate(-1.5deg)", background: "rgba(74,111,165,0.08)" }} />
+          <div className="paper-tape" />
         </div>
 
         <section id="contact" className="paper-section">
