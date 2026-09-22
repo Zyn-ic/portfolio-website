@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Pixelify_Sans } from "next/font/google";
+import { Pixelify_Sans, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-// Pixelify Sans: legible pixel font, full first-version voice.
-// (Replaces Montserrat, the Gotham stand-in — too basic.)
-const rbxFont = Pixelify_Sans({
-  variable: "--font-rbx",
+// Pixelify Sans: display voice for headings/titles (first-version energy).
+// Source Sans 3: body copy — literally what classic Roblox ran under Gotham.
+const rbxDisplay = Pixelify_Sans({
+  variable: "--font-rbx-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const rbxBody = Source_Sans_3({
+  variable: "--font-rbx-body",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${rbxFont.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${rbxDisplay.variable} ${rbxBody.variable}`} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className="antialiased"

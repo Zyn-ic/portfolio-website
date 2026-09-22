@@ -69,7 +69,7 @@ html { overflow-x: hidden; }
   background-image: radial-gradient(circle, var(--pc-stud) 2.2px, transparent 2.8px);
   background-size: 24px 24px;
   color: var(--pc-text);
-  font-family: var(--font-rbx), 'Pixelify Sans', monospace;
+  font-family: var(--font-rbx-body), 'Source Sans 3', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
@@ -78,7 +78,7 @@ html { overflow-x: hidden; }
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 .paper h1, .paper h2, .paper h3, .paper h4 {
-  font-family: var(--font-rbx), 'Pixelify Sans', monospace;
+  font-family: var(--font-rbx-display), 'Pixelify Sans', monospace;
   font-weight: 700; line-height: 1.3; letter-spacing: 0;
 }
 
@@ -169,6 +169,7 @@ html { overflow-x: hidden; }
 }
 .paper-nav-name {
   font-size: 1.4rem; font-weight: 700;
+  font-family: var(--font-rbx-display), 'Pixelify Sans', monospace;
   color: #fff;
   letter-spacing: 0;
   display: flex; align-items: center; gap: 0.6rem;
