@@ -2,11 +2,11 @@
 /* Flat blue / white / gray. No gloss, no red. */
 :root, .paper {
   color-scheme: dark;
-  --pc-bg: #232527;
-  --pc-bg-card: #323538;
-  --pc-text: #ededed;
-  --pc-text-muted: #b5b8ba;
-  --pc-text-meta: #8f9295;
+  --pc-bg: #1b1d1f;
+  --pc-bg-card: #2b2e31;
+  --pc-text: #f2f3f4;
+  --pc-text-muted: #bcc1c4;
+  --pc-text-meta: #94999d;
   --pc-accent: #00a2ff;
   --pc-accent-deep: #0078c2;
   --pc-accent-bg: rgba(0,162,255,0.14);
@@ -15,14 +15,14 @@
   --pc-play: #00b06f;
   --pc-play-deep: #00915a;
   --pc-blue: #00a2ff;
-  --pc-border: #45484c;
-  --pc-border-strong: #5a5e62;
-  --pc-shadow: rgba(0,0,0,0.35);
-  --pc-shadow-deep: rgba(0,0,0,0.45);
+  --pc-border: #3f4347;
+  --pc-border-strong: #54585d;
+  --pc-shadow: rgba(0,0,0,0.4);
+  --pc-shadow-deep: rgba(0,0,0,0.5);
   --pc-nav-bg: rgba(0,162,255,0.96);
-  --pc-stud: rgba(255,255,255,0.06);
-  --pc-base: #333638;
-  --pc-base-stud: rgba(255,255,255,0.09);
+  --pc-stud: rgba(255,255,255,0.075);
+  --pc-base: #2e3134;
+  --pc-base-stud: rgba(255,255,255,0.10);
   --pc-base-text: #d7d9da;
 }
 
@@ -57,6 +57,12 @@
 html { overflow-x: hidden; }
 .paper * { box-sizing: border-box; margin: 0; padding: 0; }
 .paper button { font-family: inherit; }
+:root {
+  /* First-version corners: deliberately uneven hand-cut geometry.
+     Big diagonal top-left, small cut bottom-right, pixel staircase
+     bottom-left. Square everywhere else — border-radius stays 0. */
+  --pc-notch: polygon(9px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 14px 100%, 14px calc(100% - 3px), 3px calc(100% - 4px), 0 calc(100% - 8px), 0 9px);
+}
 .paper ::selection { background: var(--pc-accent); color: #fff; }
 .paper {
   background-color: var(--pc-bg);
@@ -315,7 +321,7 @@ button.paper-hero-info-card { cursor: pointer; }
   background: var(--pc-bg-card);
   border: 1px solid var(--pc-border);
   border-radius: 8px;
-  box-shadow: 0 1px 4px var(--pc-shadow);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 1px 4px var(--pc-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: default; position: relative; overflow: hidden;
 
@@ -325,7 +331,18 @@ button.paper-hero-info-card { cursor: pointer; }
 }
 .pc-project-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px var(--pc-shadow);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 6px 14px var(--pc-shadow);
+}
+/* Studded brick strip crowning every tile */
+.pc-project-card::before {
+  content: '';
+  display: block;
+  height: 10px;
+  flex-shrink: 0;
+  background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1.8px, transparent 2.4px);
+  background-size: 13px 13px;
+  border-bottom: 1px solid var(--pc-accent-deep);
 }
 
 .pc-project-card-header {
@@ -341,7 +358,7 @@ button.paper-hero-info-card { cursor: pointer; }
 .pc-project-card-featured {
   font-size: 0.7rem; font-weight: 700; color: #fff;
   background: var(--pc-accent);
-  border-radius: 3px;
+  border-radius: 0;
   padding: 0.15rem 0.6rem;
   display: inline-block;
   white-space: nowrap;
@@ -414,7 +431,7 @@ button.paper-hero-info-card { cursor: pointer; }
   justify-content: center;
   width: 30px;
   height: 30px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #c9c9c9;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -506,7 +523,7 @@ button.paper-hero-info-card { cursor: pointer; }
   justify-content: center;
   width: 26px;
   height: 26px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #c9c9c9;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -535,18 +552,19 @@ button.paper-hero-info-card { cursor: pointer; }
   background-image: radial-gradient(circle, rgba(255,255,255,0.20) 1.5px, transparent 2.1px);
   background-size: 12px 12px;
   text-decoration: none;
-  border: 1px solid var(--pc-accent-deep);
-  border-radius: 4px;
-  padding: 0.4rem 0.95rem; transition: all 0.15s ease;
+  border: none;
+  border-radius: 0;
+  clip-path: var(--pc-notch);
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.3));
+  padding: 0.45rem 1rem; transition: transform 0.15s ease, filter 0.15s ease;
 }
 .pc-project-link:hover {
   background-color: var(--pc-accent); color: #fff;
-  filter: brightness(1.07);
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  filter: brightness(1.08) drop-shadow(0 3px 0 rgba(0,0,0,0.3));
 }
 /* Live Demo gets the classic flat green Play button */
-.pc-project-link--alt { background-color: var(--pc-play); border-color: var(--pc-play-deep); }
+.pc-project-link--alt { background-color: var(--pc-play); }
 .pc-project-link--alt:hover { background-color: var(--pc-play); color: #fff; }
 
 /* ═══════════ LIGHTBOX ═══════════ */
@@ -622,15 +640,20 @@ button.paper-hero-info-card { cursor: pointer; }
 }
 .paper-contact-card a:hover { text-decoration: underline; }
 .pc-copy-button {
-  background: var(--pc-bg-card); border: 1px solid var(--pc-blue);
-  border-radius: 6px;
-  color: var(--pc-blue); display: inline-flex; align-items: center;
-  padding: 0.3rem 0.6rem; font-size: 0.85rem; font-weight: 600;
-  cursor: pointer; transition: all 0.15s ease;
+  background-color: var(--pc-blue);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.20) 1.5px, transparent 2.1px);
+  background-size: 12px 12px;
+  border: none;
+  border-radius: 0;
+  clip-path: var(--pc-notch);
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,0.3));
+  color: #fff; display: inline-flex; align-items: center;
+  padding: 0.35rem 0.7rem; font-size: 0.85rem; font-weight: 600;
+  cursor: pointer; transition: transform 0.15s ease, filter 0.15s ease;
   margin: 0 auto;
 }
-.pc-copy-button:hover { background: var(--pc-blue); color: #fff; }
-.pc-copy-button--copied { background: var(--pc-green-bg); color: var(--pc-green); border-color: var(--pc-green); }
+.pc-copy-button:hover { transform: translateY(-1px); filter: brightness(1.08) drop-shadow(0 3px 0 rgba(0,0,0,0.3)); }
+.pc-copy-button--copied { background-color: var(--pc-green); background-image: none; color: #fff; }
 .pc-copy-text { font-family: inherit; }
 
 /* ═══════════ FOOTER — classic baseplate ═══════════ */
