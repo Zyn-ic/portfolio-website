@@ -110,7 +110,14 @@ export default function PaperCraftPortfolio() {
     <>
       <div className={`paper ${isLightMode ? "pc-light-mode" : ""}`}>
         <nav className={`paper-nav ${scrolled ? "paper-nav--scrolled" : "paper-nav--top"}`}>
-          <div className="paper-nav-name">{aboutData.name}</div>
+          <div className="paper-nav-name">
+            <span className="pc-logo-spin" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3h18v18H3z M8.5 8.5v7h7v-7z" fill="#E2231A" fillRule="evenodd" />
+              </svg>
+            </span>
+            {aboutData.name}
+          </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
             <div className={`paper-nav-links ${mobileMenuOpen ? "paper-nav-links--open" : ""}`}>

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Pixelify_Sans } from "next/font/google";
 import "./globals.css";
 
-// Montserrat: closest free stand-in for Gotham, the Roblox (2016-18) typeface.
-const rbxFont = Montserrat({
+// Pixelify Sans: legible pixel font, full first-version voice.
+// (Replaces Montserrat, the Gotham stand-in — too basic.)
+const rbxFont = Pixelify_Sans({
   variable: "--font-rbx",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

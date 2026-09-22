@@ -69,17 +69,17 @@ html { overflow-x: hidden; }
   background-image: radial-gradient(circle, var(--pc-stud) 2.2px, transparent 2.8px);
   background-size: 24px 24px;
   color: var(--pc-text);
-  font-family: var(--font-rbx), 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: var(--font-rbx), 'Pixelify Sans', monospace;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
   position: relative;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 .paper h1, .paper h2, .paper h3, .paper h4 {
-  font-family: var(--font-rbx), 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800; line-height: 1.25; letter-spacing: -0.01em;
+  font-family: var(--font-rbx), 'Pixelify Sans', monospace;
+  font-weight: 700; line-height: 1.3; letter-spacing: 0;
 }
 
 /* ═══════════ ANIMATED SVG ICONS ═══════════ */
@@ -168,18 +168,28 @@ html { overflow-x: hidden; }
   background: #00a2ff;
 }
 .paper-nav-name {
-  font-size: 1.3rem; font-weight: 800;
+  font-size: 1.4rem; font-weight: 700;
   color: #fff;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   display: flex; align-items: center; gap: 0.6rem;
+  perspective: 300px;
 }
-.paper-nav-name::before {
-  content: '';
-  width: 14px; height: 14px;
-  background: #fff;
-  border-radius: 2px;
+/* OG square-O mark: 360 flip with a rest between intervals.
+   ease-in-out whips it around mid-spin and settles it gently. */
+.pc-logo-spin {
   display: inline-block;
+  width: 22px; height: 22px;
   flex-shrink: 0;
+  animation: rbxLogoSpin 5s ease-in-out infinite;
+}
+.pc-logo-spin svg { width: 100%; height: 100%; display: block; }
+@keyframes rbxLogoSpin {
+  0% { transform: rotate(-8deg) rotateY(0deg); }
+  35% { transform: rotate(-8deg) rotateY(360deg); }
+  100% { transform: rotate(-8deg) rotateY(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-hero-doodle, .pc-logo-spin { animation: none; }
 }
 .paper-nav-links { display: flex; gap: 1.5rem; align-items: center; }
 .paper-nav-links a {
@@ -212,8 +222,8 @@ html { overflow-x: hidden; }
 }
 .paper-hero h1 {
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 900;
-  letter-spacing: -0.02em;
+  font-weight: 700;
+  letter-spacing: 0;
   color: var(--pc-text);
   position: relative; display: inline-block;
 }
@@ -291,6 +301,17 @@ button.paper-hero-info-card { cursor: pointer; }
   padding: 2rem;
   box-shadow: 0 1px 4px var(--pc-shadow);
   position: relative;
+}
+.paper-about-card::after {
+  content: '';
+  display: block;
+  height: 10px;
+  margin: 1.5rem -2rem -2rem;
+  border-radius: 0 0 5px 5px;
+  background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1.8px, transparent 2.4px);
+  background-size: 13px 13px;
+  border-top: 1px solid var(--pc-accent-deep);
 }
 .paper-about-bio { color: var(--pc-text-muted); font-size: 0.95rem; }
 .paper-about-meta {
@@ -628,6 +649,17 @@ button.paper-hero-info-card { cursor: pointer; }
   border-radius: 8px;
   padding: 1.25rem; text-align: center;
   box-shadow: 0 1px 4px var(--pc-shadow); transition: all 0.2s ease;
+}
+.paper-contact-card::before {
+  content: '';
+  display: block;
+  height: 8px;
+  margin: -1.25rem -1.25rem 1rem;
+  border-radius: 7px 7px 0 0;
+  background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.28) 1.8px, transparent 2.4px);
+  background-size: 13px 13px;
+  border-bottom: 1px solid var(--pc-accent-deep);
 }
 .paper-contact-card:hover {
   transform: translateY(-3px);
