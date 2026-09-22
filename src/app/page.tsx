@@ -178,8 +178,6 @@ export default function PaperCraftPortfolio() {
           </Reveal>
         </section>
 
-        <div className="paper-tape-divider"><div className="paper-tape" /></div>
-
         <section id="about" className="paper-section">
           <Reveal>
             <h2 className="paper-section-title"><PencilIcon /> About Me</h2>
@@ -205,15 +203,7 @@ export default function PaperCraftPortfolio() {
           </Reveal>
         </section>
 
-        <div className="paper-tape-divider">
-          <div className="paper-tape" />
-        </div>
-
         <HorizontalProjects />
-
-        <div className="paper-tape-divider">
-          <div className="paper-tape" />
-        </div>
 
         <section id="contact" className="paper-section">
           <Reveal>
