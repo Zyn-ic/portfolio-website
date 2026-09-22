@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jbMono.variable}`}>
+    <html lang="en" className={`${jbMono.variable}`} suppressHydrationWarning>
       <body
         suppressHydrationWarning
         className="antialiased font-mono"

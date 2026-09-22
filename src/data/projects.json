@@ -10,7 +10,7 @@
       "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/HotbarExample1.png",
       "https://raw.githubusercontent.com/Zyn-ic/Stoway/refs/heads/master/pics/Background.png"
     ],
-    "technologies": ["Fusion"],
+    "technologies": ["Fusion", "IllusionIAS", "SignalPlus"],
     "category": "Full Stack",
     "githubUrl": "https://github.com/Zyn-ic/Stoway",
     "liveUrl": "",
@@ -98,14 +98,13 @@
     "description": "A roblox movement system with FSM strict transitions to keep track of character states.",
     "longDescription": "A more controlled and memory first approach to tracking and keeping up with a players character states during movement. FSM helps me achieve a riggied approach to movement so that there are expected outcomes for each state.",
     "images": [
-      "https://i.imgur.com/tGVS4kI.gif",
       "https://i.imgur.com/Y6CMgce.gif",
       "https://i.imgur.com/kY1SWr3.gif"
     ],
     "technologies": ["IllusionIAS", "RunSerivce", "State Machine"],
     "category": "Full Stack",
     "githubUrl": "",
-    "liveUrl": "https://i.imgur.com/tGVS4kI.gif",
+    "liveUrl": "https://i.imgur.com/Y6CMgce.gif",
     "featured": true,
     "keyFeatures": [
       "Easy to keep track of memory",
@@ -120,7 +119,6 @@
     "description": "Features round system, character kit system, single combat system, abilities, perks and status effects.",
     "longDescription": "Using signalplus to communicate between scripts with API endpoints for admin cmds and debugging/logging there is a lot here and it is all mostly event based and not a constant observer checker or loop of any kind.",
     "images": [
-      "https://i.imgur.com/PGSrnh8.gif",
       "https://i.imgur.com/i81issw.gif",
       "https://i.imgur.com/1opYJqC.gif"
     ],

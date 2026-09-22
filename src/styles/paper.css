@@ -376,23 +376,93 @@ button.paper-hero-info-card { cursor: pointer; }
 }
 .pc-project-detail-media { margin-bottom: 1rem; }
 .pc-project-detail-media h4 { font-size: 0.85rem; color: var(--pc-accent); margin-bottom: 0.5rem; }
-.pc-project-detail-media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 0.6rem;
+.pc-project-carousel { min-width: 0; }
+.pc-carousel-img { animation: pcCarouselFade 0.25s ease; }
+@keyframes pcCarouselFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
+.pc-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid var(--pc-border-strong);
+  background: var(--pc-bg-card);
+  color: var(--pc-text-muted);
+  cursor: pointer;
+  opacity: 0.92;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+.pc-carousel-arrow:hover {
+  color: var(--pc-accent);
+  border-color: var(--pc-accent);
+  opacity: 1;
+}
+.pc-carousel-arrow--left { left: 0.5rem; }
+.pc-carousel-arrow--right { right: 0.5rem; }
+.pc-carousel-count {
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  font-size: 0.65rem;
+  line-height: 1.6;
+  color: var(--pc-text-muted);
+  background: var(--pc-bg-card);
+  border: 1px solid var(--pc-border);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  opacity: 0.92;
+  pointer-events: none;
+}
+.pc-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding-top: 0.55rem;
+}
+.pc-carousel-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  border: none;
+  padding: 0;
+  background: var(--pc-border-strong);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pc-carousel-dot:hover { background: var(--pc-text-muted); }
+.pc-carousel-dot--active { width: 20px; background: var(--pc-accent); }
 .pc-project-media-item {
   display: block; overflow: hidden;
   border: 1px solid var(--pc-border);
   background: var(--pc-bg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  /* Fixed ratio viewport so every image (tall Stoway screenshots,
+     wide GIFs, etc.) renders at the same size without overflow */
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
 }
 .pc-project-media-item:hover {
   transform: rotate(-1deg) scale(1.02);
   box-shadow: 3px 3px 0 var(--pc-shadow);
 }
-.pc-project-media-item img { width: 100%; height: 100px; object-fit: cover; display: block; }
+.pc-project-media-item img,
+.pc-project-media-item video {
+  width: 100%; height: 100%; max-width: 100%;
+  object-fit: cover; object-position: center top;
+  display: block; background: #0c0c0e;
+}
 .pc-project-media-buttons {
   position: absolute;
   top: 0.35rem;
@@ -465,9 +535,18 @@ button.paper-hero-info-card { cursor: pointer; }
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+  display: block;
   border-radius: 4px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.5);
   animation: pcLightboxScale 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* Anchors the fullscreen arrows + counter to the image box */
+.pc-lightbox-figure {
+  position: relative;
+  margin: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
 }
 @keyframes pcLightboxScale {
   from { transform: scale(0.85); opacity: 0; }
@@ -550,5 +629,4 @@ button.paper-hero-info-card { cursor: pointer; }
     transform: translateY(0); opacity: 1; pointer-events: auto;
   }
   .paper-contact-grid { grid-template-columns: 1fr; }
-  .pc-project-detail-media-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
 }
