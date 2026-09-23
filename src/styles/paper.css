@@ -249,11 +249,22 @@ html { overflow-x: hidden; }
   border: 1px solid var(--pc-border);
   border-radius: 6px;
   box-shadow: 0 1px 3px var(--pc-shadow);
-  padding: 0.4rem 1.2rem;
+  padding: 0.4rem 1.2rem 0.4rem 1.5rem;
   font-size: 0.85rem; font-weight: 600;
   color: var(--pc-text); font-family: inherit;
   transition: all 0.2s ease;
   cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.paper-hero-info-card::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 9px;
+  background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.3) 1.6px, transparent 2.1px);
+  background-size: 9px 9px;
+  border-right: 1px solid var(--pc-accent-deep);
 }
 button.paper-hero-info-card { cursor: pointer; }
 .paper-hero-info-card:hover {
@@ -331,6 +342,17 @@ button.paper-hero-info-card { cursor: pointer; }
 }
 
 /* ═══════════ SKILLS ═══════════ */
+/* Mini stud-line separator: the brick-strip motif between chips/tags */
+.pc-stud-sep {
+  width: 10px;
+  align-self: stretch;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background-color: var(--pc-accent);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.3) 1.6px, transparent 2.1px);
+  background-size: 10px 10px;
+  border: 1px solid var(--pc-accent-deep);
+}
 .paper-skills-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .paper-skill-tag {
   display: inline-block; padding: 0.3rem 0.75rem;
