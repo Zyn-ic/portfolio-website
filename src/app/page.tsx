@@ -15,6 +15,7 @@ import {
   ClassicNoob,
   ClassicSmile,
   TixTicket,
+  StudBlock,
 } from "@/components/icons";
 import { CopyButton } from "@/components/icons";
 import HorizontalProjects from "@/components/HorizontalProjects";
@@ -194,6 +195,7 @@ export default function PaperCraftPortfolio() {
           </Reveal>
           <Reveal delay={0.1} rotate={-0.5}>
             <div className="paper-about-card">
+              <span className="pc-stud-block" aria-hidden="true"><StudBlock /></span>
               <p className="paper-about-bio">{aboutData.bio}</p>
               <p className="paper-about-meta">📍 {aboutData.location} · ⏱ {aboutData.experience} of experience</p>
             </div>
@@ -223,10 +225,11 @@ export default function PaperCraftPortfolio() {
             {contactData.map((c, i) => (
               <Reveal key={c.id} delay={i * 0.08}>
                 <div className="paper-contact-card">
+                  <span className="pc-stud-block pc-stud-block--corner" aria-hidden="true"><StudBlock /></span>
                   <h3>{c.title}</h3>
                   <p>{c.description}</p>
                   {c.actionType === "link" ? (
-                    <a href={c.actionValue} target="_blank" rel="noopener noreferrer">{c.buttonText} →</a>
+                    <a href={c.actionValue} target="_blank" rel="noopener noreferrer">{c.buttonText} <span className="pc-link-arrow" aria-hidden="true">→</span></a>
                   ) : (
                     <CopyButton text={c.actionValue} />
                   )}

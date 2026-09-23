@@ -303,6 +303,16 @@ button.paper-hero-info-card { cursor: pointer; }
   box-shadow: 0 1px 4px var(--pc-shadow);
   position: relative;
 }
+/* Square stud block riding the top-right edge like a paperweight */
+.pc-stud-block {
+  position: absolute;
+  top: -18px;
+  right: -16px;
+  width: 54px;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+  z-index: 2;
+}
+.pc-stud-block svg { width: 100%; height: auto; display: block; }
 .paper-about-card::after {
   content: '';
   display: block;
@@ -650,6 +660,13 @@ button.paper-hero-info-card { cursor: pointer; }
   border-radius: 8px;
   padding: 1.25rem; text-align: center;
   box-shadow: 0 1px 4px var(--pc-shadow); transition: all 0.2s ease;
+  position: relative;
+}
+/* Same block, riding the bottom-left corner of contact cards */
+.pc-stud-block--corner {
+  top: auto; right: auto;
+  bottom: -14px; left: -14px;
+  width: 46px;
 }
 .paper-contact-card::before {
   content: '';
@@ -671,7 +688,12 @@ button.paper-hero-info-card { cursor: pointer; }
 .paper-contact-card a {
   color: var(--pc-blue); text-decoration: none; font-size: 0.85rem; font-weight: 600;
 }
-.paper-contact-card a:hover { text-decoration: underline; }
+.paper-contact-card a:hover {
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(0,162,255,0.65);
+}
+.pc-link-arrow { display: inline-block; transition: transform 0.2s ease; }
+.paper-contact-card a:hover .pc-link-arrow { transform: translateX(4px); }
 .pc-copy-button {
   background-color: var(--pc-blue);
   background-image: radial-gradient(circle, rgba(255,255,255,0.20) 1.5px, transparent 2.1px);

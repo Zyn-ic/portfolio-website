@@ -173,6 +173,33 @@ function ClassicSmile() {
   );
 }
 
+// Literal 4-stud block: 2x2 brick with front/back stud rows faked
+// in oblique projection, sitting on the about card's edge.
+function StudBlock() {
+  return (
+    <svg viewBox="0 0 72 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roblox stud block">
+      {/* right face */}
+      <polygon points="54,26 62,14 62,42 54,54" fill="#8a8b8d" stroke="#767577" strokeWidth="1.5" strokeLinejoin="round" />
+      {/* top face */}
+      <polygon points="10,26 18,14 62,14 54,26" fill="#B9B8BB" stroke="#767577" strokeWidth="1.5" strokeLinejoin="round" />
+      {/* back-row studs */}
+      <rect x="25" y="12" width="12" height="6" fill="#B5B4B7" />
+      <rect x="43" y="12" width="12" height="6" fill="#B5B4B7" />
+      <ellipse cx="31" cy="12" rx="6" ry="2.6" fill="#D9D8DB" stroke="#767577" strokeWidth="1.2" />
+      <ellipse cx="49" cy="12" rx="6" ry="2.6" fill="#D9D8DB" stroke="#767577" strokeWidth="1.2" />
+      {/* front-row studs */}
+      <rect x="20" y="18" width="14" height="8" fill="#B5B4B7" />
+      <rect x="38" y="18" width="14" height="8" fill="#B5B4B7" />
+      <ellipse cx="27" cy="18" rx="7" ry="3" fill="#D9D8DB" stroke="#767577" strokeWidth="1.2" />
+      <ellipse cx="45" cy="18" rx="7" ry="3" fill="#D9D8DB" stroke="#767577" strokeWidth="1.2" />
+      {/* front face */}
+      <rect x="10" y="26" width="44" height="28" fill="#A3A2A5" stroke="#767577" strokeWidth="1.5" />
+      <rect x="10" y="26" width="4" height="28" fill="#ffffff" opacity="0.22" />
+      <rect x="50" y="26" width="4" height="28" fill="#000000" opacity="0.1" />
+    </svg>
+  );
+}
+
 // Builders Club ticket — peak 2016 nostalgia.
 function TixTicket() {
   return (
@@ -202,4 +229,5 @@ export {
   ClassicNoob,
   ClassicSmile,
   TixTicket,
+  StudBlock,
 };
