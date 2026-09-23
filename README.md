@@ -1,6 +1,6 @@
-# Open Source Portfolio Template
+# Yumchi's Portfolio
 
-Portfolio website template built with Next.js and Tailwind CSS. Manage content via JSON files.
+Personal portfolio site with a legacy Roblox theme, built with Next.js (static export) and Tailwind CSS.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ Portfolio website template built with Next.js and Tailwind CSS. Manage content v
 ## Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/portfolio-website.git
+git clone https://github.com/Zyn-ic/portfolio-website.git
 cd portfolio-website
 npm install
 npm run dev
@@ -17,18 +17,43 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Documentation & Wiki
+## Scripts
 
-Detailed docs are in the **[Wiki](https://github.com/Zyn-ic/portfolio-website/wiki)**:
+- `npm run dev` — dev server (Turbopack)
+- `npm run build` — production build (static export to `out/`)
+- `npm start` — serve the production build
+- `npm run lint` — Biome lint + `tsc --noEmit`
+- `npm run format` — Biome format
 
-- [Getting Started](https://github.com/Zyn-ic/portfolio-website/wiki/Getting-Started)
-- [Configuration & Content](https://github.com/Zyn-ic/portfolio-website/wiki/Configuration-&-Content)
-- [Assets & Media Management](https://github.com/Zyn-ic/portfolio-website/wiki/Assets-&-Media-Management)
-- [Deployment Guide](https://github.com/Zyn-ic/portfolio-website/wiki/Deployment-Guide)
+## Content
+
+All site content lives in JSON files under `src/data/`:
+
+- `about.json` — name, title, location, bio, skills
+- `projects.json` — project cards (images, features, links)
+- `contact.json` — contact cards
+
+Project images can be remote URLs. Imgur GIFs are served as pausable MP4s automatically.
+
+## Features
+
+- Horizontally-scrolling project tiles with thumbnail carousels and fullscreen lightbox
+- Animated GIFs pause when tabbed out, unfocused, or scrolled offscreen
+- Light/dark legacy-Roblox theme with pixel display type (Pixelify Sans) and Source Sans body
+
+## Branches
+
+- `main` — current Roblox theme
+- `roblox-theme` — Roblox theme working branch
+- `paper-theme` — previous paper-craft theme
+
+## Deployment
+
+Static export (`out/`) via `next.config.js`, deployed with the included `netlify.toml`.
 
 ## Tech
 
-- [Next.js 15](https://nextjs.org/) — App Router, static export
+- [Next.js 16](https://nextjs.org/) — App Router, static export
 - [Tailwind CSS](https://tailwindcss.com/) — styling
 - [Biome](https://biomejs.dev/) — linting/formatting
 - [Bippy](https://github.com/lxsmnsyc/bippy) — React dev tools
