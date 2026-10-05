@@ -14,6 +14,7 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   featured: boolean;
+  openSource?: boolean;
   keyFeatures: string[];
 }
 
@@ -206,6 +207,7 @@ function ProjectCard({ project }: { project: Project }) {
           <h3>{project.title}</h3>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
             {project.featured && <span className="pc-project-card-featured">★ featured</span>}
+            {project.openSource && <span className="pc-project-card-opensource">{"</> open source"}</span>}
           </div>
         </div>
         <p className="pc-project-card-desc">{project.description}</p>

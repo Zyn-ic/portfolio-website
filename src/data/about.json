@@ -1,7 +1,7 @@
 {
   "name": "Yumchi",
   "title": "Frontend & Mainly Backend Developer",
-  "bio": "Passionate developer with experience in Lua, Python, C (all variations), Basic website and api handling.",
+  "bio": "Passionate developer with experience in Lua, Python, C (all variations), Basic website and API handling. I develop Roblox games on both Linux and Windows.",
   "location": "Procrastination Capital",
   "timeZone": "Etc/GMT+6",
   "email": "Zynicc@proton.me",
@@ -18,5 +18,5 @@
     "SQLITE",
     "Docker"
   ],
-  "experience": "3+ years"
+  "experience": "4+ years"
 }

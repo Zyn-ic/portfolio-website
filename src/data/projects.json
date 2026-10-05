@@ -15,6 +15,7 @@
     "githubUrl": "https://github.com/Zyn-ic/Stoway",
     "liveUrl": "",
     "featured": true,
+    "openSource": true,
     "keyFeatures": [
       "Drag & Drop UI",
       "Swappable Slots",
@@ -29,86 +30,75 @@
   },
 
   {
-    "id": "project-2",
-    "title": "MannequinSytem",
-    "description": "This system supports custom mannequins — a great way to showcase different outfits in specific locations!",
-    "longDescription": "Using this system can you help with custom locations, custom themes, custom outfits, and a whole room to just explore, congiure and expand.",
-    "images": [],
-    "technologies": ["Janitor", "ZonePlus"],
+    "id": "project-9",
+    "title": "Combat System",
+    "description": "A very very early modular combat system for M1s, stuns, skills and armor states.",
+    "longDescription": "A very very early build of a modular approach to combat so it can plug into anything with melee, battlegrounds, rpgs, or anything with M1s in general. Strict states mean hits never linger after stun, with cancelable skills, hyper armor skills that deal damage without getting stunned, super hyper armor skills that also take no damage in this state, plus ragdolling and R6 support. Built to pair with my custom animation service.",
+    "images": [
+      "https://i.imgur.com/qfAI5cB.gif"
+    ],
+    "technologies": ["State Machine", "QuickNet", "Chrono"],
     "category": "Full Stack",
-    "githubUrl": "https://github.com/Zyn-ic/MannequinSytem",
-    "liveUrl": "https://vimeo.com/1077172684?share=copy",
-    "featured": false,
-    "keyFeatures": [
-      "Shirts, Pants, Accessories",
-      "BodyColors ",
-      "WarmLoading",
-      "ColdLoading",
-      "Other Stuff"
-    ]
-  },
-
-  {
-    "id": "project-3",
-    "title": "MM2-AutoFarm",
-    "description": "Simple script that has both a hub and autofarm",
-    "longDescription": "I noticed my script has be forked and used in a lot of the newer mm2 autofarm scripts to find the closet coin and I'm kinda honored cause before I uploaded the free script back in summer 2024 autofarms were just collecting any random coin that spawned into the map and I did the same thing until I watched some youtube and found crushfire's video on Octree and from there the script was born. Sadly I had a lot to do in college so I couldn't update the script to be better but on my winter break in a mere two days I made an updated version which wouldn't have you go to coins outside the map or 'false positions' as I used to call it. Then in I think 4 or 5 days I created the Free Script which is a mm2 hub. I WILL NOT BE UPDATING the hub and will focus on better techniques/functions to collect coins;",
-    "images": [],
-    "technologies": ["Octree", "XSX UI LIBRARY", "Iris UI LIBRARY"],
-    "category": "FrontEnd",
-    "githubUrl": "https://github.com/Zyn-ic/MM2-AutoFarm/",
-    "liveUrl": "https://youtu.be/2ds-9ShyP1c?si=_5kBU-7JTwVZ-zcW",
-    "featured": true,
-    "keyFeatures": [
-      "Increase/Decrease walkspeed",
-      "TP to player",
-      "Refresh Roles",
-      "Rejoin",
-      "Server Hop",
-      "Destroy gui",
-      "Autofarm",
-      "Murderer/Sheriff Info",
-      "Get Gun",
-      "Fling Murderer"
-    ]
-  },
-
-  {
-    "id": "project-4",
-    "title": "Database Project",
-    "description": "Full Stack Library System webapp for my database project.",
-    "longDescription": "This is a basic library system to demonstrate most if not all topics on Intro to Databases. Aslo features some topics from Web Dev, and GUI. To quick run the application makes line 280 and 281 readable by removing the '#' and adding one to line 279.",
-    "images": [],
-    "technologies": ["Flask", "sqlite"],
-    "category": "Full Stack",
-    "githubUrl": "https://github.com/JustUsingaWebsite/Database-Project",
+    "githubUrl": "",
     "liveUrl": "",
-    "featured": false,
+    "featured": true,
+    "openSource": false,
     "keyFeatures": [
-      "Loan Books",
-      "Return Books",
-      "Add/Edit Books, Loans, Patrons",
-      "Delete"
+      "Modular M1 combo system",
+      "No lingering hits after stun",
+      "Cancel-able skills",
+      "Hyper armor skills (damage, can't be stunned)",
+      "Super hyper armor skills (no stun, no damage taken)",
+      "Ragdolling + R6 support",
+      "Works with custom animation service"
+    ]
+  },
+
+  {
+    "id": "project-8",
+    "title": "Projectile",
+    "description": "All-in-one Roblox projectile system with custom tracer and hitscan.",
+    "longDescription": "Projectile is a custom all-in-one projectile system based on https://devforum.roblox.com/t/projectile-an-all-in-one-projectile-system-10/3932599 with SwiftCast-style logic. Everything is custom-built and lightweight, using only SignalPlus and QuickNet as dependencies. Includes tracer and hitscan support plus demo effects.",
+    "images": [
+      "https://i.imgur.com/S1QVAZK.gif",
+      "https://i.imgur.com/f7Ds1TB.gif",
+      "https://i.imgur.com/zUo8wfd.gif",
+      "https://i.imgur.com/fK46WPm.gif"
+    ],
+    "technologies": ["SignalPlus", "QuickNet", "SwiftCast", "Custom Tracer", "Hitscan"],
+    "category": "Full Stack",
+    "githubUrl": "",
+    "liveUrl": "",
+    "featured": true,
+    "openSource": false,
+    "keyFeatures": [
+      "Tracer and hitscan projectiles",
+      "Goku flick deflect effect",
+      "JoJo time-stop effect",
+      "Magneto arrow collect & distribute effect",
+      "Glass breaking effect",
+      "Custom-built, only SignalPlus + QuickNet dependencies"
     ]
   },
 
   {
     "id": "project-5",
     "title": "Roblox MovementSystem",
-    "description": "A roblox movement system with FSM strict transitions to keep track of character states.",
-    "longDescription": "A more controlled and memory first approach to tracking and keeping up with a players character states during movement. FSM helps me achieve a riggied approach to movement so that there are expected outcomes for each state.",
+    "description": "A Roblox movement system with FSM strict transitions to keep track of character states.",
+    "longDescription": "A more controlled and memory first approach to tracking and keeping up with a players character states during movement. FSM helps me achieve a rigid approach to movement so that there are expected outcomes for each state.",
     "images": [
       "https://i.imgur.com/Y6CMgce.gif",
       "https://i.imgur.com/kY1SWr3.gif"
     ],
-    "technologies": ["IllusionIAS", "RunSerivce", "State Machine"],
+    "technologies": ["IllusionIAS", "RunService", "State Machine"],
     "category": "Full Stack",
     "githubUrl": "",
-    "liveUrl": "https://i.imgur.com/Y6CMgce.gif",
+    "liveUrl": "",
     "featured": true,
+    "openSource": false,
     "keyFeatures": [
       "Easy to keep track of memory",
-      "Strick defined states and implementations",
+      "Strict defined states and implementations",
       "Easy console and mobile integrations"
     ]
   },
@@ -116,8 +106,8 @@
   {
     "id": "project-6",
     "title": "Asymmetrical Systems",
-    "description": "Features round system, character kit system, single combat system, abilities, perks and status effects.",
-    "longDescription": "Using signalplus to communicate between scripts with API endpoints for admin cmds and debugging/logging there is a lot here and it is all mostly event based and not a constant observer checker or loop of any kind.",
+    "description": "Round, kit and map logic plus cmdr admin, all event based with zero loop checking.",
+    "longDescription": "Full game loop for asymmetrical games. Rounds run themselves, kits hand out characters with abilities, perks and status effects, maps load and clean up between rounds, and cmdr covers admin commands with api endpoints for debugging and logging. Everything talks through signalplus events so nothing sits in a loop checking state, and character rigs stay out of replicatedstorage until they are needed.",
     "images": [
       "https://i.imgur.com/i81issw.gif",
       "https://i.imgur.com/1opYJqC.gif"
@@ -126,47 +116,102 @@
       "IllusionIAS",
       "State Machine",
       "PromiseModule",
+      "Cmdr",
       "Custom systems"
     ],
     "category": "Full Stack",
     "githubUrl": "",
-    "liveUrl": "https://i.imgur.com/i81issw.gif",
+    "liveUrl": "",
     "featured": true,
+    "openSource": false,
     "keyFeatures": [
-      "Easy to bind to state changes",
-      "Keep track of how many rounds",
-      "Add and Customize game state/constants",
-      "Scalable structure so there isn't character rig spam in replicatedstorage"
+      "Self running round system",
+      "Character kits with abilities and perks",
+      "Map loading and cleanup",
+      "Status effects",
+      "Cmdr admin commands",
+      "API endpoints for debugging and logging",
+      "Event based, no observer loops",
+      "No character rig spam in replicatedstorage"
     ]
   },
 
   {
     "id": "project-7",
     "title": "Weapon Framework",
-    "description": "Using state machines and batched networking & raycasts I create the milkchoco framework",
-    "longDescription": "taking both opensourced and self created optimizations I take the usualy loadout store -> input -> network -> validation to a more structured appeal.",
+    "description": "A gun framework built on my own projectile system with batched networking & raycasts",
+    "longDescription": "Takes the usual loadout, input, network and validation flow and structures it properly. Shooting runs on my projectile system with per frame raycast batching based on fire rate, tiny network packets, proper visual replication, and the server double checking fire rate on every packet. Mix of opensourced and self made optimizations.",
     "images": [
       "https://i.imgur.com/WvlzLtv.gif",
       "https://i.imgur.com/bnixQYM.gif",
       "https://i.imgur.com/PCbk2Ga.gif"
     ],
     "technologies": [
-      "ProjectilePlus",
-      "RunSerivce",
+      "Projectile",
+      "RunService",
       "State Machine",
       "Custom AnimationService",
-      "NetRay [networking library]",
+      "NetRay",
       "SwiftCast"
     ],
     "category": "Full Stack",
     "githubUrl": "",
-    "liveUrl": "https://i.imgur.com/2GexYWV.gif",
+    "liveUrl": "",
     "featured": false,
+    "openSource": false,
     "keyFeatures": [
-      "Really Optimized network packets",
-      "Proper Replication visuals",
-      "Optimized per-frame raycast batching based on fire-rate",
-      "Server validates per packet fire-rate checks"
+      "Built on my Projectile system",
+      "Really small network packets",
+      "Proper replication visuals",
+      "Per frame raycast batching based on fire rate",
+      "Server checks fire rate on every packet"
+    ]
+  },
+
+  {
+    "id": "project-10",
+    "title": "AnimateService",
+    "description": "A drop-in replacement for the stock Animate script with layered priorities and marker-driven anims.",
+    "longDescription": "A custom animation service that replaces the stock Roblox Animate script. Copy the services into StarterPlayerScripts, drag your animations under the script, and it handles the rest with a priority stack from Core locomotion up through Action layers for arms, M1s and dashes, skills and blocks, all the way to stun, ragdoll and death. Supports R6 and R15, warms the cache with preloading, reuses tracks from a loaded bin so nothing leaks, and fires hitreg, sfx and shake from animation markers. Built to pair with my combat system.",
+    "images": [
+      "https://i.imgur.com/SbV8p6V.gif"
+    ],
+    "technologies": ["R6", "R15", "Priority Layers", "Animation Markers", "SignalPlus"],
+    "category": "Full Stack",
+    "githubUrl": "https://github.com/Zyn-ic/AnimateService",
+    "liveUrl": "",
+    "featured": false,
+    "openSource": true,
+    "keyFeatures": [
+      "Drop-in stock Animate replacement",
+      "R6 and R15 animation discovery",
+      "Priority stack from Core to Action4",
+      "M1s, dashes, skills, stuns and ragdolls on call",
+      "Marker-driven hitreg, sfx and shake",
+      "Preloaded cache plus reused tracks with no leaks",
+      "Stance and moveset profiles",
+      "Pairs with my combat system"
+    ]
+  },
+
+  {
+    "id": "project-2",
+    "title": "MannequinSystem",
+    "description": "This system supports custom mannequins, a great way to showcase different outfits in specific locations!",
+    "longDescription": "Using this system can you help with custom locations, custom themes, custom outfits, and a whole room to just explore, configure and expand.",
+    "images": [],
+    "technologies": ["Janitor", "ZonePlus"],
+    "category": "Full Stack",
+    "githubUrl": "https://github.com/Zyn-ic/MannequinSytem",
+    "liveUrl": "https://vimeo.com/1077172684?share=copy",
+    "featured": false,
+    "openSource": true,
+    "keyFeatures": [
+      "Shirts, Pants, Accessories",
+      "BodyColors",
+      "WarmLoading",
+      "ColdLoading",
+      "And more"
     ]
   }
 ]

@@ -9,6 +9,15 @@ function toImgurMp4(src: string): string {
   return src.replace(/\.gif([?#]|$)/i, ".mp4$1");
 }
 
+function isLocalVideo(src: string): boolean {
+  return /^[^?#]+\.(mp4|webm)([?#]|$)/i.test(src);
+}
+
+function resolveVideoSrc(src: string): string {
+  if (isImgurGif(src)) return toImgurMp4(src);
+  return src;
+}
+
 interface ProjectMediaProps {
   src: string;
   alt: string;
@@ -20,8 +29,9 @@ interface ProjectMediaProps {
  * Renders project media, pausing animated content to save compute.
  *
  * - Imgur GIFs are served as muted looping MP4s (bytes Imgur already
- *   generates for gifv), which support play()/pause() — raw <img> GIFs
- *   have no pause API, so this is the Discord-style approach.
+ *   generates for gifv), and local .mp4/.webm files play directly —
+ *   both support play()/pause(), raw <img> GIFs have no pause API,
+ *   so this is the Discord-style approach.
  * - Playback pauses when the tab is hidden, the window loses focus, or
  *   the element scrolls out of view, and resumes when visible again.
  * - Anything else (PNGs, non-Imgur files) renders as a plain <img>.
@@ -30,7 +40,7 @@ interface ProjectMediaProps {
 export default function ProjectMedia({ src, alt, className, onClick }: ProjectMediaProps) {
   const [videoFailed, setVideoFailed] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const useVideo = !videoFailed && isImgurGif(src);
+  const useVideo = !videoFailed && (isImgurGif(src) || isLocalVideo(src));
 
   useEffect(() => {
     setVideoFailed(false);
@@ -81,7 +91,7 @@ export default function ProjectMedia({ src, alt, className, onClick }: ProjectMe
       <video
         ref={videoRef}
         className={className}
-        src={toImgurMp4(src)}
+        src={resolveVideoSrc(src)}
         aria-label={alt}
         muted
         loop
